@@ -1,0 +1,23 @@
+{
+  "name": "mern",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nyinyizin-dev/nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nyinyizin-dev/nodejs/issues"
+  },
+  "homepage": "https://github.com/nyinyizin-dev/nodejs#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
