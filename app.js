@@ -1,20 +1,31 @@
 const express = require("express");
 const app = express();
 
+app.set("view engine", "ejs");
+app.set("views", "./views");
+
 app.get("/", (req, res) => {
-  res.sendFile("./views/home.html", { root: __dirname });
+  let blogs = [
+    { title: "Blog 1", content: "This is the first blog post." },
+    { title: "Blog 2", content: "This is the second blog post." },
+    { title: "Blog 3", content: "This is the third blog post." },
+  ];
+
+  res.render("home", {
+    blogs,
+  });
 });
 
 app.get("/about", (req, res) => {
-  res.sendFile("./views/about.html", { root: __dirname });
+  res.render("about");
 });
 
 app.get("/contact", (req, res) => {
-  res.sendFile("./views/contact.html", { root: __dirname });
+  res.render("contact");
 });
 
 app.use((req, res) => {
-  res.status(404).sendFile("./views/404.html", { root: __dirname });
+  res.status(404).render("404");
 });
 
 app.listen(3000, () => {
