@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
+  <%- include('./components/head.ejs') %>
 
   <body>
     <%- include('./components/navbar.ejs') %>
-    <h1>Home Page</h1>
+    <div class="container my-3">
+      <h3 class="text-decoration-underline">Home Page</h3>
 
-    <% if (blogs.length > 0) { %>
-    <ul>
-      <% blogs.forEach(blog => { %>
-      <li>
-        <h2><%= blog.title %></h2>
-        <p><%= blog.content %></p>
-      </li>
-      <% }) %>
-    </ul>
-    <% } else { %>
-    <p>No blogs available.</p>
-    <% } %>
+      <% if (blogs.length > 0) { %>
+      <ul>
+        <% blogs.forEach(blog => { %>
+        <li>
+          <h4><%= blog.title %></h4>
+          <p><%= blog.content %></p>
+        </li>
+        <% }) %>
+      </ul>
+      <% } else { %>
+      <p>No blogs available.</p>
+      <% } %>
+    </div>
   </body>
 </html>

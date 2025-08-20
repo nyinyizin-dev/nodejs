@@ -13,19 +13,20 @@ app.get("/", (req, res) => {
 
   res.render("home", {
     blogs,
+    title: "Home Page",
   });
 });
 
 app.get("/about", (req, res) => {
-  res.render("about");
+  res.render("about", { title: "About Page" });
 });
 
 app.get("/contact", (req, res) => {
-  res.render("contact");
+  res.render("contact", { title: "Contact Page" });
 });
 
 app.use((req, res) => {
-  res.status(404).render("404");
+  res.status(404).render("404", { title: "404 Not Found" });
 });
 
 app.listen(3000, () => {
