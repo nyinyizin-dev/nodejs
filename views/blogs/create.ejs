@@ -1,0 +1,27 @@
+<h3 class="text-decoration-underline">Blog create</h3>
+
+<div class="card p-2 mx-auto mt-3" style="max-width: 600px">
+  <div class="card-body">
+    <form action="/blogs" method="post">
+      <div class="mb-3">
+        <label for="" class="form-label">Title</label>
+        <input type="text" class="form-control" name="title" />
+      </div>
+      <div class="mb-3">
+        <label for="" class="form-label">Intro</label>
+        <input type="text" class="form-control" name="intro" />
+      </div>
+      <div class="mb-3">
+        <label for="" class="form-label">Body</label>
+        <textarea
+          type="text"
+          class="form-control"
+          rows="5"
+          name="body"
+        ></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-md btn-primary">Create</button>
+    </form>
+  </div>
+</div>
